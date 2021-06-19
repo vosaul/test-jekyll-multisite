@@ -26,7 +26,7 @@ jobs:
         with:
           source-directory: 'src'
           destination-github-username: 'vosaul'
-          destination-repository-name: 'test-moving-folders'
+          destination-repository-name: 'test-moving-folder'
           user-email: v986963@gmail.com
           commit-message: See ORIGIN_COMMIT from $GITHUB_REF
           target-branch: main
