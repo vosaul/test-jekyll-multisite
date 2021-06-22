@@ -30,4 +30,6 @@ jobs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run Jekyll
       run: |
-        cd site1 && bundle install && bundle exec jekyll build
+        - cd site1 && bundle install && bundle exec jekyll build
+        - curl -X POST -d {} https://api.netlify.com/build_hooks/60d1b1d01461d1bfd39387f2
+
