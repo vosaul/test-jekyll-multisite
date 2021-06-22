@@ -10,8 +10,9 @@ name: Ruby
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
+    paths: [ _site ]
+  workflow_dispatch
+
 
 jobs:
   test:
