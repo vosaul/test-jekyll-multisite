@@ -34,4 +34,5 @@ jobs:
     - name: Run Jekyll
       run: |
         cd site1
+        bundle install
         bundle exec jekyll build
