@@ -5,13 +5,12 @@
 # This workflow will download a prebuilt Ruby version, install dependencies and run tests with Rake
 # For more information see: https://github.com/marketplace/actions/setup-ruby-jruby-and-truffleruby
 
-name: Deploing to Netlify
+name: Ruby
 
 on:
   push:
     branches: [ master ]
-    paths: 
-      'site1/_site/**'
+    paths: [ _site ]
   workflow_dispatch:
 
 jobs:
