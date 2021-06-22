@@ -6,6 +6,8 @@ layout: home
 
 ## test changes
 
+NEW CHANGES
+
 ```
 sites/
   site1/
