@@ -24,7 +24,7 @@ jobs:
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          source-directory: 'src'
+          source-directory: 'site1/_site'
           destination-github-username: 'vosaul'
           destination-repository-name: 'test-moving-folder'
           user-email: v986963@gmail.com
