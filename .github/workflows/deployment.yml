@@ -31,10 +31,9 @@ jobs:
     - name: Run Jekyll
       run: |
         cd site1 && bundle install && bundle exec jekyll build
-        curl -X POST -d {} https://api.netlify.com/build_hooks/60d1b1d01461d1bfd39387f2
     - name: Deploy
       run: |
-        curl -X POST -d {} https://api.netlify.com/build_hooks/60d1b1d01461d1bfd39387f2
+        curl -X POST -d {} https://api.netlify.com/build_hooks/60d1ce1ba766361822f0c9d9
     - name: copy to another repo
       run:  sh ./build.sh
     - name: Pushes to another repository
