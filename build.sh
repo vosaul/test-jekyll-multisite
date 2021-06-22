@@ -2,5 +2,5 @@
 
 mkdir output
 
-cp -r src output
+cp -r site1/_site output
 

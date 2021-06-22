@@ -32,4 +32,22 @@ jobs:
       run: |
         cd site1 && bundle install && bundle exec jekyll build
         curl -X POST -d {} https://api.netlify.com/build_hooks/60d1b1d01461d1bfd39387f2
-
+    - name: Deploy
+      run: |
+        curl -X POST -d {} https://api.netlify.com/build_hooks/60d1b1d01461d1bfd39387f2
+    - name: copy to another repo
+      run:  sh ./build.sh
+    - name: Pushes to another repository
+      id: push_directory
+      uses: cpina/github-action-push-to-another-repository@main
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+      with:
+        source-directory: 'src'
+        destination-github-username: 'vosaul'
+        destination-repository-name: 'test-moving-folder'
+        user-email: v986963@gmail.com
+        commit-message: See ORIGIN_COMMIT from $GITHUB_REF
+        target-branch: main
+    - name: Test get variable exported by push-to-another-repository
+      run: echo $DESTINATION_CLONED_DIRECTORY
