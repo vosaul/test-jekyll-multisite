@@ -3,6 +3,9 @@ permalink: /
 layout: home
 ---
 # SITE 1 homepage
+
+## test changes
+
 ```
 sites/
   site1/
