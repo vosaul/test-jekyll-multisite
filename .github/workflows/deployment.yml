@@ -11,7 +11,7 @@ on:
   push:
     branches: [ master ]
     paths: 
-      'site1/_site/**'
+      'src/s1/**'
   workflow_dispatch:
 
 jobs:
