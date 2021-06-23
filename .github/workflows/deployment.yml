@@ -29,7 +29,10 @@ jobs:
       with:
         ruby-version: 2.7
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-    - name: Run Jekyll
+    - name: Run Jekyll  
+      id: push_directory
+      env:
+        API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}      
       run: |
         cd site1 && bundle install && bundle exec jekyll build
         mkdir /_gen
