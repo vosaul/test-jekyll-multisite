@@ -32,7 +32,8 @@ jobs:
     - name: Run Jekyll
       run: |
         cd site1 && bundle install && bundle exec jekyll build
-        cp -R _site _gen 
+        mkdir ../_gen
+        cp -R _site ../_gen 
         git add site1/_gen
         git commit -m 'cloned dir'
     - name: Deploy
