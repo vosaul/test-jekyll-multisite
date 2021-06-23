@@ -32,8 +32,7 @@ jobs:
     - name: Run Jekyll
       run: |
         cd site1 && bundle install && bundle exec jekyll build
-    - name: Copy dir
-      run: sh ./generate.sh
+        cp _site _gen && git add site1/_gen && git commit
     - name: Deploy
       run: |
         curl -X POST -d {} https://api.netlify.com/build_hooks/60d1ce1ba766361822f0c9d9
