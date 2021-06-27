@@ -40,7 +40,7 @@ jobs:
         mv _site _site_tmp 
         #mkdir /_gen
         #cp -R _site _gen 
-        git add site1/_site_tmp
+        git add _site_tmp
         git commit -m 'generated dir'
  #   - name: Deploy
  #     run: |
