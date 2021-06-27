@@ -36,7 +36,7 @@ jobs:
       env:
         API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}      
       run: |
-        cd site1 && bundle install && bundle exec jekyll build
+        cd site1 #&& bundle install && bundle exec jekyll build
         mv _site _site_tmp 
         #mkdir /_gen
         #cp -R _site _gen 
