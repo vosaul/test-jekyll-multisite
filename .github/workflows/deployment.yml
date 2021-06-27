@@ -41,7 +41,7 @@ jobs:
         #mkdir /_gen
         #cp -R _site _gen 
         git add _site_tmp
-        #git commit -m 'generated dir'
+        git commit -m 'generated dir'
  #   - name: Deploy
  #     run: |
  #       curl -X POST -d {} https://api.netlify.com/build_hooks/60d1ce1ba766361822f0c9d9
